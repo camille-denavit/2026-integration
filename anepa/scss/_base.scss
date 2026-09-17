@@ -1,0 +1,507 @@
+/*
+    Created on : nov. 2022
+    Author     : Camille Denavit
+    Description: feuille de style de base
+*/
+
+body{
+    @include fontFamilyBase();
+}
+
+h1{
+    @include fontFamilyTitle();
+    font-size:37px ;
+}
+
+h2{
+    @include fontFamilySubTitle();
+    font-size:23px ;
+    margin-top: 30px;
+}
+
+h3{
+    font-size: 18px;
+}
+
+h3,h4,h5{
+    @include fontFamilyTitle();
+}
+
+a{
+    text-decoration: underline;
+    color: $couleurBase;
+}
+
+a:hover{
+    color: $couleurSecondaire2;
+}
+
+p {
+    margin-bottom: .9rem;
+}
+
+.bleu{
+    color: $couleurBase;
+}
+//BLOC DE COULEUR
+a.btn{
+    @include globalButton();
+}
+
+a:hover.btn{
+    @include globalButtonHover();
+}
+
+//Responsive images
+img{
+    width: 100%;
+    height: auto;
+}
+//FOOTER
+#footer{
+    padding: 15px;
+    font-size: 13px;
+    color: $couleurBase;
+    text-align: center;
+}
+
+//HEADER
+.site-header{
+    .navbar-toggler{
+        border: none;
+        background-image: url("../images/bg_burger_orange.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 0;
+        width: 49px;
+        background-size: cover;
+        height: 49px;
+        box-shadow:none;
+    }
+}
+
+.navbar-brand{
+    max-width: 160px;
+}
+
+#navigation-principale{
+    text-align: center;
+    background-color:$couleurBase;
+    color: #fff;
+    border-radius: 20px;
+    padding: 15px 0;
+    margin-top: 15px;
+    .nav-link{
+        @include Marigny_Book();
+        color: #fff;
+        font-size: 18px;
+    }
+    .small-link .nav-link{
+        font-size: .8em;
+    }
+}
+
+//BLOC DE COULEUR
+.blocTextColor{
+    background-color: $couleurSecondaire1;
+    border-radius: 20px;
+    padding: 15px;
+    color: $couleurBase;
+    margin-bottom: 15px;
+    p{
+        margin-bottom: 0;
+    }
+    a.btn{
+        background-color: #fff;
+        color: #00719D;
+    }
+    a:hover.btn {
+        background-color: #004D6B;
+        color: #fff;
+    }
+}
+
+.blocTextColor.blocColor2{
+    background-color: $couleurBase;
+    color: #fff;
+    a,h1,h2{
+        color: #fff;
+    }
+}
+
+.blocTextBlanc{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+//PAGES
+.accueil #contenu{
+    margin-top: 30px;
+}
+
+body.accueil{
+    background-image: url("../images/illu_feuilles_compo_xl_orange_35_reverse.svg");
+    background-repeat: repeat-x;
+    background-position: 20px;
+    aside{
+        //mobile first
+        order:3;
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+        @include media-breakpoint-up(md) {
+            order: 2;
+            padding-right: 30px;
+            margin-right: 0;
+            text-align: left;
+        }
+        blockquote{
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+            font-size: 22px;
+        }
+    }
+    .site-header .navbar-toggler{
+        @include media-breakpoint-up(md) {
+            order: 3;
+        }
+    }
+}
+
+section.accueil{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    h2{
+        font-size: 28px;
+        margin-top: 0;
+    }
+    .blocTextColor .btn{
+        margin-top: 15px;
+    }
+}
+
+//aside utilisé pour le bloc clea
+aside{
+    h3{
+        font-size: 18px;
+    }
+
+}
+
+body.contact .colillu{
+    background-image: url("../images/illu_feuille_1_bleu_30.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    min-height: 245px;
+}
+
+//APROPOS
+section.intro{
+    margin-bottom: 30px;
+}
+
+.formation, .atelier, .surmesure{
+    padding: 15px;
+    border: 1px $couleurSecondaire1 solid;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    h2{
+        margin-top: 0;
+    }
+    .satisfaction{
+        font-style: italic;
+    }
+    .infos{
+        color: $couleurBase;
+        p{
+            margin-bottom: 0;
+            .label{
+                font-weight: 700;
+            }
+        }
+
+    }
+}
+
+.introform{
+    .description{
+        font-weight: 700;
+        color:$couleurBase;
+    }
+}
+
+.menuetcontenu .navbar{
+    color: $couleurBase;
+    padding: 15px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    a{
+        text-decoration: underline;
+        &:hover{
+            color: $couleurSecondaire2;
+        }
+    }
+    .sousmenu{
+        margin-bottom: .9rem;
+        .nav-link{
+            padding: 5px 20px 5px 10px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            border-bottom: 1px solid #ececec;
+            &:hover{
+                background-color: #ececec;
+            }
+            &.active{
+                background-color: $couleurBase;
+                text-decoration: none;
+                background-image: url("../images/fleche_right.svg");
+                background-position: 97% 50%;
+                background-repeat: no-repeat;
+                background-size: 8px;
+                &:hover{
+                    background-color:$couleurSecondaire2;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+
+.titreSousMenu{
+    @include Marigny_Book();
+    font-weight: 700;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.contenuformations{
+    .titreSousMenu{
+        padding: 2px 15px;
+        border-radius: 20px;
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: $couleurBase;
+        color: #fff;
+    }
+}
+
+blockquote{
+    @include Marigny_Book_Italic();
+    font-size:31px ;
+    color:$couleurBase;
+    padding: 30px 0;
+}
+
+h3 span{
+    font-weight: 700;
+    font-size: .7em;
+}
+
+figure{
+text-align: center;
+}
+
+figcaption{
+    @include Marigny_Book_Italic();
+    color: $couleurBase;
+    padding: 10px 20%;
+    text-align: center;
+}
+
+//Bouton back to top
+#btBackTop {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 20px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: $couleurBase; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 8px 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    background-image: url(../images/fleche_top.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 30px;
+    background-size: 50%;
+}
+
+#btBackTop:hover {
+    background-color: $couleurSecondaire2; /* Add a dark-grey background on hover */
+}
+
+.realillu img{
+    width: 100%;
+}
+
+.liensrapides{
+    color: $couleurBase;
+    padding: 15px;
+}
+
+// CARROUSEL réalisations
+.date{
+    @include fontFamilySubTitle();
+}
+.carousel{
+    margin-bottom: 30px;
+    .carousel-control-next, .carousel-control-prev{
+        width: 8%;
+    }
+    border-radius: 20px;
+    overflow: hidden;
+    .realfond{
+        width: 100%;
+        // min-height:300px;
+        padding: 30px 8%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include media-breakpoint-up(md) {
+            flex-direction: row;
+            align-items: center;
+         }
+        h3{
+            font-size: 31px;
+            // background-color: #fff;
+            // padding: 5px;
+            border-radius: 8px;
+            // color: $couleurSecondaire2;
+            font-style: italic;
+        }
+
+        &.real1{
+            background-color: $couleurSecondaire1;
+            color: $couleurSecondaire2;
+            a,p,h3{
+                color:$couleurSecondaire2;
+            }
+        }
+        &.real2{
+            background-color: $couleurBase;
+            color: #fff;
+            a,p,h3{
+                color: #fff;
+            }
+        }
+        &.real3{
+            background-color: $couleurSecondaire2;
+            color: #fff;
+            a,p,h3{
+                color: #fff;
+            }
+        }
+    }
+    .illureal{
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        background-color: #fff;
+        margin-right: 5%;
+        flex: 0 0 200px;
+    }
+    // .descriptionreal{
+    // }
+}
+
+.listereal{
+    .realfond{
+        width: 100%;
+        padding:5px 15px;
+        border-bottom: 1px $couleurSecondaire1 solid;
+        p{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+//PAGE PARTNEAIRES
+ul.gridlogos{
+    padding: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    align-items: stretch;
+    li{
+        margin: 10px;
+        list-style: none;
+        border: 1px #ececec solid;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        img{
+            align-self: center;
+            max-width: min-content;
+            &.maxW150{
+                max-width: 150px;
+            }
+            &.maxH120{
+                max-height: 120px;
+                width: auto;
+            }
+        }
+    }
+}
+
+.labelcertif{
+    border: 1px $couleurSecondaire1 solid;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 15px;
+    p strong{
+        color: $couleurBase;
+    }
+
+}
+
+.autreslogos{
+    padding: 15px;
+    margin: 15px;
+    ul.gridlogos{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+.labelcertif h2, .autreslogos h2{
+    margin-top: 0
+}
+
+.breadcrumb{
+    @include fontFamilySubTitle();
+    color: $couleurSecondaire1;
+    justify-content: center;
+    font-size: 0.9em;
+    a{
+        color: $couleurSecondaire1;
+    }
+}
+
+//Nabvigation
+#nextpage{
+    text-align: center;
+    padding: 50px;
+    a{
+        border: 1px $couleurBase solid;
+        color: $couleurBase;
+        background-color: #fff;
+        &:hover{
+            background-color: $couleurSecondaire2;
+            color: #fff;
+        }
+    }
+}
+
+.mw-300{
+    max-width: 300px;
+}

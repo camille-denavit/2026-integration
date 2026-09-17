@@ -1,0 +1,985 @@
+/* Adaptation du theme Educalpes "projet" intégré en premier lieu sur le site Jeunes en Refuges en 2024
+ * Sur la base du theme margot
+ */
+@import url('margot.css');
+@import url('fonts.css');
+@import url('variables.css');
+
+/*
+BASES
+*/
+body {
+	font-family: var(--main-text-fontfamily);
+	font-weight: var(--font_weight_regular);
+	font-size: 13px;
+	line-height: 1.5;
+	color: var(--color_base_text);
+	background-color: #fff;
+}
+
+b,
+strong {
+	font-family: var(--main-text-bold-fontfamily);
+	font-weight: var(--font_weight_bold);
+}
+
+a /* Liens par défaut (non survolés) */ {
+	text-decoration: underline;
+	color: var(--1001NA_bleu_nuit);
+}
+
+a:hover {
+	text-decoration: underline;
+	color:  var(--color_base_text);
+}
+
+/* .checkbox {
+	display: inline-block;
+	width: 240px;
+} */
+
+.fullwidth-header,
+.white {
+	background: white;
+}
+
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+	text-decoration: none;
+}
+
+a.lien_text {
+	font-family: var(--main-text-bold-fontfamily);
+	font-weight: var(--font_weight_bold);
+}
+
+a.lien_text:before {
+	content: '> ';
+}
+
+blockquote {
+	font-family: var(--text-quote-fontfamily);
+	border-left: none;
+	color: var(--title-h1-color);
+	padding: 0;
+	margin-top: 20px;
+	font-size: 25px;
+	text-align: left;
+	line-height: 120%;
+}
+
+/*ligne de séparation stylisée avec un rond au centre*/
+hr{
+	width: 250px;
+	height: 15px;
+	position: relative;
+	margin: auto;
+	border: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+hr::before{
+	display: block;
+	content: "";
+	width: 250px;
+	height: 1px;
+	background-color: var(--orange);
+	position: absolute;
+	margin-top: 6px;
+}
+
+hr::after{
+	display: block;
+	content: "";
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color:  var(--orange);
+	position: relative;
+	margin: auto;
+}
+
+hr.vert::before{
+	background-color: var(--vert_educalpes);
+}
+
+hr.vert::after{
+	background-color:  var(--vert_educalpes);
+}
+
+/********
+HEADER
+********/
+
+.header_main {
+	background-image: url(../images/Header_1001nuitsAlpines_petit.jpg);
+	background-position: right top;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.header_main.header_home {
+	background-image: url(../images/Header_1001nuitsAlpines.jpg);
+}
+
+.header_main #logo_header {
+	padding: 2%;
+	padding-bottom: 0;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+
+.header_main #logo_header img{
+	width: 100px;
+	height: auto;
+}
+
+.header_main #logo_header img{
+	width: 120px;
+}
+
+.header_main.header_home #logo_header img{
+	width: 180px;
+}
+
+.header_main #logo_header br {
+	display: none;
+}
+
+.fullwidth-header {
+	margin-bottom: 20px;
+	margin-top: 50px;
+}
+
+#ACEditor .form-actions {
+	margin: 0 0 18px;
+}
+
+.header_main .pave_RS{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*FOOTER*/
+
+.yeswiki-footer {
+	margin-top: 90px;
+	padding: 19px 20px 20px;
+	border-top: 1px solid #e5e5e5;
+	background-color: var(--orange);
+	color: #000;
+}
+
+.yeswiki-footer a {
+	color: black;
+}
+
+a.icone_rs {
+	font-size: 0;
+	text-decoration: none;
+	background-color: var(--orange);
+	display: inline-block;
+	border-radius: 50%;
+	padding: 5px;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	margin-right: 5px;
+}
+
+a.icone_rs i {
+	font-size: 23px;
+}
+
+a:hover.icone_rs {
+	background-color: #000;
+	color: #fff;
+}
+
+.logos_soutiens {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.logos_soutiens li img {
+	float: left;
+	max-width: 95px;
+	margin: 5px;
+}
+
+.logo_agree {
+	width: 100px;
+	margin: auto;
+}
+
+.encart {
+	float: right;
+	background-color: rgba(242, 242, 242, 1);
+	margin: 0 0 12px 0;
+	padding: 12px;
+	width: 100%;
+}
+
+.encart-transparent {
+	float: left;
+	margin-left: 12px;
+	margin-bottom: 12px;
+	padding: 12px;
+	width: 100%;
+}
+
+.encart-transparent-cote {
+	float: left;
+	margin-left: 6px;
+	margin-bottom: 6px;
+	padding: 6px;
+	width: 100%;
+}
+
+.bords-bleus {
+	border: 1px solid var(--bleu_educalpes);
+	-webkit-box-shadow: inset 0 0 3px 0 #42c1c7;
+	box-shadow: inset 0 0 3px 0 #42c1c7;
+}
+
+.bords-jaunes {
+	border: 2px solid #ffe303;
+	-webkit-box-shadow: inset 0 0 3px 0 #ffe303;
+	box-shadow: inset 0 0 3px 0 #ffe303;
+}
+
+.bords-orange {
+	border: 1px solid #fbb040;
+	box-shadow: inset 0 0 3px 0 #fbb040;
+	-webkit-box-shadow: inset 0 0 3px 0 #fbb040;
+}
+
+.bords-gris {
+	border: 1px solid #dadbdb;
+	padding: 15px;
+	/*    -webkit-box-shadow:inset 0 0 3px 0 #42c1c7;*/
+	/*box-shadow:inset 0 0 3px 0 #42c1c7;*/
+}
+
+.img-responsive img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+}
+
+#lientop {
+	bottom: 10px;
+	color: #aebb2d;
+	font-size: 32px;
+	position: fixed;
+	right: 10px;
+	text-decoration: none;
+	z-index: 20001;
+}
+#lientop:hover {
+	color: #006b98;
+	text-decoration: none;
+}
+
+.fond-orange {
+	background-color: #fbb040;
+	color: var(--orange); /*#FFFFFF*/
+	/*width:215px;*/
+	height: 300px;
+}
+
+.fond-bleu {
+	background-color: #42c1c7;
+	color: #ffffff;
+	/*width:215px;*/
+	height: 300px;
+}
+
+.fond-rouge {
+	background-color: #f15a29;
+	color: #ffffff;
+	/*width:215px;*/
+	height: 300px;
+}
+
+.fond-vert-cote {
+	background-color: #a7be39;
+	color: #ffffff;
+}
+
+.fond-vert-general {
+	background-color: #d0d997;
+	color: var(--color_base_text);
+	border-radius: 10px 10px;
+}
+
+.share {
+	text-align: right;
+	margin-bottom: 1%;
+}
+
+.marge-footer-fixe {
+	margin-bottom: 230px;
+} /*doit etre plus grand que le height du footer*/
+.footer-fixe {
+	bottom: 0;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+	height: 200px;
+	position: fixed;
+	width: 100%;
+	z-index: 20000;
+	overflow: auto; /*pour mettre l'ascenseur si le texte dépasse sur des petits écrans*/
+}
+
+/*MENU PRINCIPAL*/
+
+#yw-topnav .links-container .navbar-nav{
+	width: 100% !important;
+}
+
+#yw-topnav .navbar-nav > li{
+	flex-grow: 1;
+    text-align: center;
+}
+
+#yw-topnav .navbar-nav a{
+	text-decoration: none;
+	font-size: 18px;
+}
+
+
+/*********
+TEXTES
+**********/
+h1 {
+	margin: 0 0 10px 0;
+	color: var(--orange);
+	font-size: 30px;
+	line-height: 1.2em;
+	font-family: var(--main-text-bold-fontfamily);
+	font-weight: var(--font_weight_bold);
+}
+
+/*Titre 2*/
+h2 {
+	font-size: 25px;
+	margin-top: 10px;
+	margin-bottom: 1.5em;
+	color: var(--1001NA_bleu_nuit);
+	font-family: var(--main-text-bold-fontfamily);
+	font-weight: var(--font_weight_bold);
+}
+
+/*Titre 3*/
+h3 {
+	font-size: 16px;
+	margin-top: 10px;
+	color: var(--1001NA_bleu_nuit);
+	font-family: var(--main-text-bold-fontfamily);
+	font-weight: var(--font_weight_bold);
+}
+
+/*Titre 4*/
+h4 {
+	font-size: 14px;
+	margin-top: 10px;
+	color: var(--1001NA_bleu_nuit);
+	font-family: var(--main-text-bold-fontfamily);
+	font-weight: var(--font_weight_bold);
+}
+
+/*bandeau rouge orangé*/
+h5 {
+	font-size: 13px;
+	margin-top: 10px;
+	color: var(--color_base_text);
+	font-family: var(--main-text-bold-fontfamily);
+	font-weight: var(--font_weight_bold);
+}
+
+/*bandeau vert foncé*/
+h6 {
+	background-color: var(--1001NA_bleu_nuit);
+	color: #fff;
+	margin: 0 0 10px 0;
+	padding: 2px 6px;
+	font-size: 15px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	/*border-radius : 10px 10px / 5px 5px; => pour arrondir les angles*/
+}
+
+/*bandeau rouge orangé*/
+h7 {
+	color: #fff;
+	margin: 0 0 10px 0;
+	padding: 2px 6px;
+	font-size: 15px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	/*border-radius : 10px 10px / 5px 5px; => pour arrondir les angles*/
+}
+
+/*titre accueil blanc*/
+h8 {
+	color: #404948; /*#FFF*/
+	margin: 0 0 10px 0;
+	padding: 2px 6px;
+	font-size: 18px;
+}
+
+/*Marge dans les blocs encarts*/
+.encart ul,
+.encart li {
+	margin: 0;
+	padding: 0;
+}
+.encart li {
+	margin-left: 18px;
+}
+
+/* carousel */
+.item.left {
+	margin: 0;
+	float: none;
+}
+.carousel-indicators {
+	bottom: 0px;
+}
+
+/*Toutes les images*/
+.attached_file{
+	border-radius: 8px;
+  overflow: hidden;
+}
+
+/********
+REFONTE 2023
+*********/
+
+/*PAGE HOME*/
+.section {
+	margin: 10px 0;
+}
+
+.fond_bleu_motif, .fond_jaune_motif, .fond_orange_motif, .pave_CTA {
+	background-color:var(--1001NA_turquoise);
+	border-radius: 8px;
+	padding: 15px;
+	background-image:url(../images/motif_montagnes_blanches.svg); 
+	background-position: bottom right;
+	background-size: 70%;
+	background-repeat: no-repeat;
+}
+
+.fond_jaune_motif{
+	background-color: var(--1001NA_jaune);
+}
+
+.fond_orange_motif{
+	background-color: var(--rouge_clair);
+}
+
+.pave_CTA{
+	overflow: hidden;
+}
+
+.pave_CTA .btn-default, .btn-default.download{
+	background-color: var(--1001NA_bleu_nuit);
+	text-shadow: none;
+	color: #fff;
+	font-family: var(--main-text-bold-fontfamily);
+	font-weight: var(--font_weight_bold);
+	padding: 10px 50px 10px 15px;
+	box-shadow: -3px 3px 0px rgba(0,0,0,0.2);
+	border: none;
+	margin-top: 10px;
+	background-image: none;
+}
+
+.pave_CTA .btn-default:hover,
+.btn-default.download:hover{
+	background-color: var(--orange);
+}
+
+.pave_CTA .btn-default{
+	background-image:url(../images/picto_jumelles_blanches.svg); 
+	background-position: right 5% center;
+	background-size: 27px;
+	background-repeat: no-repeat;
+}
+
+.btn-default.download{
+	padding-right: 20px;
+	margin-bottom: 20px;
+}
+
+.btn-default.download [class^="icon-"]{
+	float: left;
+	font-size: 20px;
+	margin-rights: 10px;
+
+}
+/*Bloc acces rapide*/
+.section_acces_rapide h2{
+	color: var(--orange);
+}
+
+.picto_acces_rapide.attached_file{
+	width: 90px;
+	margin: auto;
+	margin-top: -60px;
+	display: block;
+}
+
+.item_acces_rapide, .item_lien_externe{
+	background-color: #fff;
+	border-radius: 8px;
+	background-image:url(../images/picto_jumelles_orange.svg); 
+	background-position: right 5% bottom 95%;
+	background-size: 60px;
+	background-repeat: no-repeat;
+	padding: 15px;
+	box-shadow: -5px 5px 0px rgba(251,220,192,1);
+}
+
+.item_lien_externe{
+	background-image:url(../images/picto_lien_externe.svg); 
+	background-position: right 7% bottom 82%;
+	background-size: 40px;
+}
+
+.item_acces_rapide .attached_file{
+	width: 90px;
+	height: 90px;
+	background-color:var(--orange_clair);
+}
+.item_acces_rapide .attached_file img{
+	max-height: 90px;
+	width: auto;
+}
+#section_vous_etes .btn-default {
+	margin: 15px 0px 5px 0px;
+}
+.picto_deco.attached_file {
+	max-width: 130px;
+	margin: auto;
+	display: block;
+}
+
+/*ACCORDEON*/
+.accordion .panel,
+.panel-group .panel{
+	margin-bottom: 10px;
+	background-color: transparent;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.accordion .panel.collapsed{
+	background-color:transparent;
+}
+
+.accordion .panel .titre_accordeon,
+.panel button.panel-heading,
+.panel-default:not(.note-editor) > .panel-heading{
+	margin: 0;
+	padding: 10px 15px;
+	background: transparent;
+	color:inherit;
+	text-decoration: none;
+	text-shadow: none;
+	border-bottom: none;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.accordion .panel .titre_accordeon.current{
+	background-color: #fff;
+}
+
+.accordion .panel .panel-body,
+.panel-group .panel .panel-body{
+	background-color: #fff;
+}
+
+
+.accordion .panel .panel-body li{
+	list-style: none;
+} 
+
+/*SOUS MENUS*/
+.menupage{
+	margin-bottom: 15px;
+}
+
+.menupage > span{
+	background-color: var(--1001NA_jaune);
+	display: block;
+	border-radius: 8px;
+	padding: 15px;
+	background-position: bottom right;
+	background-size: 70%;
+	background-repeat: no-repeat;
+}
+
+.menupage span.sousmenu_participer{
+	background-color: var(--1001NA_turquoise);
+}
+
+.menupage span.sousmenu_explorer{
+	background-color: var(--rouge_clair);
+}
+
+.titre_sousmenu{
+	color: var(--1001NA_bleu_nuit);
+	margin-bottom:10px;
+	font-size: 15px;
+	font-family: var(--main-text-bold-fontfamily);
+	font-weight: var(--font_weight_bold);
+}
+
+.menupage ul{
+	list-style: none;
+	padding: 0;
+}
+
+.menupage a{
+	border-bottom: 1px solid #fff;
+	padding: 5px 0;
+	display: inline-block;
+	text-decoration: none;
+	width: 100%;
+}
+
+/****************
+VERSION DESKTOP
+*****************/
+
+@media (min-width: 768px) {
+	/*MENU PRINCIPAL*/
+	/* .navbar-inverse .navbar-nav > li > a > span {
+		display: block;
+	}
+
+	.navbar-inverse .navbar-nav > li {
+		width: 16.5%;
+		border-right: 1px solid #fff;
+	}
+
+	.navbar-inverse .navbar-nav > li:last-child {
+		border-right: none;
+	} */
+
+}
+
+@media (min-width: 992px) {
+	/*HEADER*/
+	.header_main {
+		background-position: center top;
+	}
+
+	.header_main #logo_header {
+		width: auto;
+		text-align: left;
+		display: inline-block;
+		padding-bottom: 2%;
+	}
+
+	.header_main.header_home #logo_header {
+		margin-top: 6%;
+		margin-bottom: 6%;
+	}
+	
+	#logo_header,.header_main p {
+		margin-left: 23%;
+	}
+	.header_main p {
+		text-align: right;
+		margin-top: 8%;
+		padding-left: 2%;
+	}
+
+	.header_main.header_home p{
+		text-align: left;
+		margin-bottom: 7%;
+	}
+
+	.header_main .pave_RS{
+		text-align: right;
+		margin-top: 10px;
+	}
+}
+
+@media (min-width: 1400px) {
+	#logo_header,.header_main p {
+		margin-left: 5%;
+	}
+}
+
+@media (max-width: 1200px) {
+	.hidden-below-md {
+		display: none !important;
+	}
+}
+
+/*************
+1001 Nuits Alpines
+*************/
+
+.bleu_nuit{
+	color: var(--1001NA_bleu_nuit);
+}
+
+/**
+HOME
+**/
+
+/*titre entête*/
+.titre_entête_home{
+	font-family: var(--text-quote-fontfamily);
+	text-align: center;
+	margin: 15px 0;
+}
+
+.titre_entête_home span.smaller{
+	font-size: 0.7em;
+}
+
+.titre_entête_home span.etoiles{
+	display: flex;
+	justify-content: center;
+}
+
+.titre_entête_home span.etoiles:before{
+	content: "";
+	display: table;
+	background-image: url(../images/Etoiles_bigtop.png);
+	width: 75px;
+	height: 80px;
+	background-size: contain;
+	float: left;
+}
+
+.titre_entête_home span.etoiles:after{
+	content: "";
+	display: table;
+	background-image: url(../images/Etoiles_bigtop_right.png);
+	width: 75px;
+	height: 80px;
+	background-size: contain;
+	float: right;
+}
+
+/*pavé actu*/
+
+.home_actu .well{
+	border: none;
+	background-color: var(--1001NA_jaune);
+	background-image: url(../images/picto-montagne.png);
+	background-repeat: no-repeat;
+	background-position: 70%;
+	background-size: 40%;
+}
+
+.home_actu img{
+	max-width: 100px;
+}
+
+.home_actu a{
+	text-decoration: none;
+}
+
+.home_actu .lead{
+	font-size: 12px;
+	float: right;
+}
+
+.home_actu .clearfix{
+	height: 0;
+}
+
+/*liens directs*/
+.pave_liensdirect {
+	background-color: var(--1001NA_jaune);
+	padding: 0 30px;
+	border-radius: var(--border-radius-blocks);
+}
+
+.pave_liensdirect h2{
+	margin: 0;
+	padding: 20px 0 10px 0;
+	font-size: 1em;
+}
+
+a.bt_direct{
+	background-color: var(--1001NA_bleu_nuit);
+	border-radius: var(--border-radius-blocks);
+	color: #fff;
+	display: inline-block;
+	padding: 5px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	text-align: left;
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.bt_direct:before{
+	content: "";
+	display: table;
+	width: 50px;
+	height: 45px;
+	background-repeat:no-repeat;
+	background-position: center;
+	margin-right: 5px;
+}
+
+.bt_direct.pic_chamois:before{
+	background-image: url(../images/Picto_chamois.svg);
+}
+
+.bt_direct.pic_jumelles:before{
+	background-image: url(../images/Picto_jumelles.svg);
+}
+
+.bt_direct.pic_etoile:before{
+	background-image: url(../images/Picto_etoile.svg);
+}
+
+a.bt_direct:hover{
+	background-color: var(--orange);
+	color: #fff;
+	text-decoration: none;
+}
+
+a.bt_direct:focus{
+	color: #fff;
+}
+
+.bt_direct b{
+	display: contents;
+}
+
+/*pavé vidéo*/
+.pave_video{
+	background-color: var(--1001NA_bleu_nuit);
+	background-image: url(../images/bg_constellation_1001NA.png);
+	background-position: 70%;
+	padding: 0 30px;
+	border-radius: var(--border-radius-blocks);
+}
+
+.pave_video h2 {
+	color: #fff;
+	margin: 0;
+	padding: 20px 0 10px 0;
+	font-size: 1em;
+}
+
+.home_temoignages_rs{
+	background-color: var(--1001NA_bleu_nuit);
+	background-image: url(../images/enfants_nuit_etoiles_barriere.jpg);
+	background-size: cover;
+	padding: 0 30px;
+	border-radius: var(--border-radius-blocks);
+	background-position: center;
+}
+
+.pave_home_temoignage{
+	padding: 15px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: var(--border-radius-blocks);
+	position: relative;
+	margin: 30px 0;
+}
+
+.pave_home_temoignage blockquote{
+	color: #fff;
+	font-size: 25px;
+	text-align: left;
+}
+
+.guillemets_left{
+	position: absolute;
+	top: -10px;
+  left: -10px;
+}
+
+.guillemets_right{
+	position: absolute;
+	bottom: 10px;
+  right: -10px;
+}
+
+.pave_home_temoignage a{
+	color: #fff;
+}
+
+.pave_home_temoignage a:hover{
+	color:  rgba(255, 255, 255, 0.8);;
+}
+
+/**
+FOOTER 1001NA
+**/
+
+#yw-footer{
+	background-color: var(--1001NA_bleu_nuit);
+	color: #fff;
+}
+
+#yw-footer a{
+	color: #fff;
+}
+
+#yw-footer .btn-default:hover{
+	color:var(--1001NA_bleu_nuit);
+}
+
+#yw-footer .logo img{
+	max-width: 100px !important;
+	height: auto;
+}
+
+#yw-footer .etoiles{
+	float: left;
+}
+
+#yw-footer .pave_RS{
+	text-align: left;
+}
+
+.BAZ_label{
+	font-size: .8rem;
+}
+
+/*Actualités*/
+
+.bazar-list .article h4{
+	font-size: 25px;
+}
+
+.bazar-list .article h4 a,
+.bazar-list .well h2 a{
+	text-decoration: none;
+}

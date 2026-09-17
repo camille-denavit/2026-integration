@@ -1,0 +1,50 @@
+/* FONT OPEN SANS */
+@font-face {
+	font-family: 'open_sans';
+	src: url('../fonts/opensans/OpenSans-Regular-webfont.woff') format('woff'),
+		url('../fonts/opensans/OpenSans-Regular-webfont.ttf') format('truetype');
+	font-weight: var(--font_weight_regular);
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'open_sans';
+	src: url('../fonts/opensans/OpenSans-Italic-webfont.woff') format('woff'),
+		url('../fonts/opensans/OpenSans-Italic-webfont.ttf') format('truetype');
+	font-weight: var(--font_weight_regular);
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'open_sans_bold';
+	src: url('../fonts/opensans/OpenSans-Bold-webfont.woff') format('woff'),
+		url('../fonts/opensans/OpenSans-Bold-webfont.ttf') format('truetype');
+	font-weight: var(--font_weight_bold);
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'open_sans_bold';
+	src: url('../fonts/opensans/OpenSans-BoldItalic-webfont.woff') format('woff'),
+		url('../fonts/opensans/OpenSans-BoldItalic-webfont.ttf') format('truetype');
+	font-weight: var(--font_weight_bold);
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'shadowsintolight';
+	src: url('../fonts/shadowsintolight/shadowsintolight-regular-webfont.woff') format('woff'),
+		url('../fonts/shadowsintolight/shadowsintolight-regular-webfont.woff2') format('woff2'),
+		url('../fonts/shadowsintolight/ShadowsIntoLight-Regular.ttf') format('truetype');
+	font-weight: var(--font_weight_regular);
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'kalamscript';
+	src: url('../fonts/kalam/kalam-bold-webfont.woff') format('woff'),
+		url('../fonts/kalam/kalam-bold-webfont.woff2') format('woff2'),
+		url('../fonts/kalam/Kalam-Bold.ttf') format('truetype');
+	font-weight: var(--font_weight_bold);
+	font-style: normal;
+}

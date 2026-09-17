@@ -1,0 +1,58 @@
+/*COULEURS*/
+:root {
+	/*couleurs de base du logo educalpes*/
+	--vert_educalpes: #aebd15;
+	--rouge_educalpes: #e84e1c;
+	--jaune_educalpes: #fab233;
+	--bleu_educalpes: #44bcc6;
+
+	--orange:#F15A29;
+	
+	/*Couleurs foncées */
+	--vert_fonce: #707D29;
+	--orange_fonce: #C96114;
+	--marron_fonce: #7D3F11;
+	--marron_fonce_ombre: #452309;
+
+	--orange_medium:#FBDCC0;
+
+	/*déclinaison claires*/
+	/*pour applats*/
+	--bleu_clair: #acd4d6;
+	--vert_clair: #dfe5a2;/*encore plus clair #F6F8E4*/
+	--rouge_clair: #f5b8a4;
+	--orange_clair:#FDE8C0;
+
+    /*Couleurs 1001 Nuits Alpines */
+    --1001NA_bleu_nuit: #253066;
+    --1001NA_jaune:#DDC66C;
+    --1001NA_bleu_gris:#576C8A;
+    --1001NA_bleu_lumineux:#4852AD;
+	--1001NA_turquoise:#AADDDD;
+
+
+	/*textes*/
+	--color_base_text: #1e1e1e;
+
+	/* font weight */
+	--font_weight_regular: normal;
+	--font_weight_bold: 500;
+
+    --primary-color: var( --1001NA_bleu_nuit);
+    --secondary-color-1: var(--1001NA_jaune);
+    --secondary-color-2: var(--1001NA_bleu_gris);
+
+    /* Default values when there is no preset */
+    --main-text-fontsize: 13px;
+    --main-text-fontfamily: 'open_sans', Verdana, sans-serif;
+    --main-text-bold-fontfamily: 'open_sans_bold', Verdana, sans-serif;
+    --main-title-fontfamily:'open_sans', Verdana, sans-serif;
+    --title-h1-color:var(--primary-color);
+    --title-h2-color:var(--primary-color);
+    --title-h3-color:var(--secondary-color-1);
+    --title-h4-color:var(--secondary-color-2);
+    --title-h5-color:var(--secondary-color-2);
+	--text-quote-fontfamily: 'kalamscript';
+
+	--border-radius-blocks:.5rem;
+}

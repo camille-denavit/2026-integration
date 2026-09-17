@@ -1,0 +1,124 @@
+/*
+    Created on : nov. 2022
+    Author     : Camille Denavit
+    Description: Variable et rewrite des variables bootstrap
+*/
+
+/*************
+VARIABLES
+*************/
+
+/**
+ COULEURS
+ **/
+$couleurBase: #00719D; //bleu
+$couleurSecondaire1: #F7A833; //orange
+
+$couleurSecondaire2: #004D6B; //bleu foncé
+
+
+/*************
+FONT MIXIN
+*************/
+@mixin Source_Sans_Pro_Regular() {
+    font-family: source-sans-pro,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+@mixin Source_Sans_Pro_Regular_italic() {
+    font-family: source-sans-pro,sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@mixin Source_Sans_Pro_Bold() {
+    font-family: source-sans-pro,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin Source_Sans_Pro_Bold_italic() {
+    font-family: source-sans-pro,sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+@mixin Marigny_Book() {
+    font-family: marigny,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin Marigny_Book_Italic() {
+    font-family: marigny,sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+@mixin Marigny_Bold() {
+    font-family: marigny,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+@mixin Marigny_Bold_Italic() {
+    font-family: marigny,sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+// FONTS
+@mixin fontFamilyBase{
+    @include Source_Sans_Pro_Regular();
+    color: #000;
+}
+
+@mixin fontBold{
+    @include Source_Sans_Pro_Regular();
+    color: $couleurBase;
+}
+
+@mixin fontFamilyTitle{
+    @include Marigny_Book();
+    color: $couleurBase;
+}
+
+@mixin fontFamilySubTitle{
+    @include Marigny_Book();
+    color: $couleurBase;
+}
+
+// FONTS
+$fontSizeBase: 15px;
+$fontColorBase: $couleurBase; //noir
+
+$fontFamilyTitle: marigny,sans-serif;
+$fontFamilySubTitle:marigny,sans-serif;
+
+$fontFamilyLight: "Campton-Light", sans-serif;
+$fontFamilyBold: "Campton-Bold", sans-serif;
+$fontFamilySemiBold: "Campton-SemiBold", sans-serif;
+
+$fontawesome: "FontAwesome";
+
+
+/*************
+MIXINS
+*************/
+@mixin globalButton() {
+    background-color: $couleurBase;
+    color: #fff;
+    // border: #fff 2px solid;
+    padding: 8px 15px;
+    line-height: 100%;
+    display: inline-block;
+    font-weight: 400;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+@mixin globalButtonHover() {
+    background-color: $couleurSecondaire2;
+    // border-color: $couleurBase;
+    color: #fff;
+}
+
